@@ -18,7 +18,7 @@ namespace AsyncTestProject
         }
         public void  LoadDictionary()
         {
-            Console.WriteLine("Dictionary loading now");
+            Console.WriteLine("Dictionary loading now");//This is the code that is causing us to hang we can't type anything untill this is done
             StreamReader sr = new StreamReader(@"Dictionary.txt");
             int count = 0;
             parseFile(sr, count);
@@ -43,7 +43,7 @@ namespace AsyncTestProject
         {
             while (true)
             {
-                Console.WriteLine("Which word would you like to search for?");
+                Console.WriteLine("Which word would you like to search for?"); //Now after this we can type
                 var s = Console.ReadLine();
                 if (!Regex.IsMatch(s, @"^[a-z]+$"))
                 {
